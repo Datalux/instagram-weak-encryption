@@ -66,3 +66,10 @@ pad2 = 1 if c[-2] == '=' else 0
 pl = (len(c) - 136 - pad - pad1 - pad2)
 print(pl)
 ```
+
+# Impact
+To exploit this you need to read the comminication between the client and server.
+I have imaginad three possibile scenario:
+1. An attacker have physical access to the victim machine
+2. MITM attack
+3. Bad VPN that can read the traffic
