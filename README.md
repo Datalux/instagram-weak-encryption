@@ -49,7 +49,7 @@ ciphertext = encrypt_aes_256_gcm(
 
 # The problem
 
-By collecting two or more ciphertexts we can see that the ciphertext length depends on the plaintext lenght so there is not any padding applied to the plaintext.
+By collecting two or more ciphertexts we can see that the ciphertext length depends on the plaintext length so there is not any padding applied to the plaintext.
 For example:
 
 
@@ -60,11 +60,11 @@ Password length 12: `#PWD_INSTAGRAM_BROWSER:10:1633796717:AY5QAElzjWV0j+OJ+qAnNX
 Therefore we need to setup a way to extract the password length from the ciphertext
 
 # Calculate the length
-It's very easy to calculate the password length simply by count the ciphertext lenght and see the base64 padding.
+It's very easy to calculate the password length simply by count the ciphertext length and see the base64 padding.
 We need to calculate:
 1. The base64 blocks number
 2. How many '=' base64 pad there are
-3. The difference between the ciphertext length and a one char password ciphertext lenght (136 chars)
+3. The difference between the ciphertext length and a one char password ciphertext length (136 chars)
 
 I combined these points to create a simple Python script to calculate the exact length of a password:
 ```Python
