@@ -7,6 +7,16 @@ Instagram and Facebook encrypt the password submitted at login to sending this t
 # Encryption phases
 Instagram use AES256-GCM to encrypt the password in this with an 12 byte IV and a timestamp as AD. 
 
+We can see the current Instagram encryption configurations at this [endpoint](https://www.instagram.com/data/shared_data/).
+For example:
+```json
+"encryption": {
+  "key_id": "251",
+  "public_key": "64c25328c4ba5e40f4e249310b861aa616488e096d4de6f2018c3c33c5e6d75c",
+  "version": "10"
+  }
+```
+
 This is a ciphertext example:
 `#PWD_INSTAGRAM_BROWSER:10:1633796717:AY5QAElzjWV0j+OJ+qAnNXpQjZ6TN7A980Y2RMlrl63z80AkALvvb1IHYpzDXeX5w/Mf1jxTbF2PVJRh/Q99+J7FXkgmnE9qOhatEbKkdyoatN952Dee/PC8CiWLJTcoFDiCFovU9uwijaIDycIQ7w==`
 
